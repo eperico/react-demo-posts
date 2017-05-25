@@ -19,7 +19,7 @@ Component rendering stays unique to each platform (web/native).
 and `web` houses the `webpack` configs and `index.html` (it is also the
 destination of our minified bundle).
 
-The `app` itself is primarily based on my [React/Webpack/Redux Boilerplate][bp],
+The `app` itself is primarily based on my [React/Webpack/Redux Boilerplate][bp] and [React Native Hello World](https://github.com/kauffecup/react-native-web-hello-world),
 for more info on that head over there.
 
 
