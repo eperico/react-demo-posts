@@ -1,0 +1,36 @@
+{
+  "env": {
+    "web_prod": {
+      "presets": [
+        "stage-0",
+        "react"
+      ],
+      "plugins": [
+        "syntax-object-rest-spread",
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    },
+    "web_dev": {
+      "presets": [
+        "stage-0",
+        "react"
+      ],
+      "plugins": [
+        "react-hot-loader/babel",
+        "syntax-object-rest-spread",
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    },
+    "development": {
+      "presets": [
+        "react-native"
+      ],
+      "plugins": [
+        "add-module-exports",
+        "transform-class-properties"
+      ]
+    }
+  }
+}

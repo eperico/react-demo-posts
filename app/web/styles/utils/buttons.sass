@@ -1,0 +1,39 @@
+button
+  border: none
+  text-shadow: none
+.btn
+  display: inline-block
+  padding: 10px 25px
+  text-align: center
+  border-radius: $border-radius
+  font-weight: bold
+  &.btn--main
+    background-color: $main
+    color: $white
+  &.btn--main-d
+    background-color: $main-d
+    color: $white
+  &.btn--cream
+    background-color: $cream
+    color: $grey-m
+  &.btn--clear
+    background-color: transparent
+    color: $grey-m
+  &.btn--icon
+    display: flex
+    padding: 10px 15px
+    align-items: center
+    .icon
+      display: inline-block
+      vertical-align: middle
+      font-size: 1.414em
+    span
+      flex: 1
+  &.btn--call
+    height: 44px
+    width: 44px
+    padding: 0
+    text-align: center
+    border-radius: 50%
+    line-height: 14px
+    font-size: 1.414em

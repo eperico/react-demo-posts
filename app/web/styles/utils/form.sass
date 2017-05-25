@@ -1,0 +1,118 @@
+// Form
+input, textarea, .input, .textarea
+  display: inline-block
+  padding: 0 10px
+  margin: 0 0 20px
+  height: 40px
+  line-height: 40px
+  width: 100%
+  outline: none
+  background-color: $white
+  border: 1px solid $grey-border
+
+textarea, .textarea
+  padding: 10px
+  height: auto
+  resize: none
+  overflow: hidden
+
+label,.label
+  display: inline-block
+  margin: 0 0 5px
+  font-weight: bold
+  &.label--main
+    @include breakpoint(xs)
+      margin: 0 -11px
+      display: block
+      padding: 5px 10px
+      background-color: $main
+      color: $white
+
+.select-wrapper
+  padding: 8px 20px 8px 10px
+  display: inline-block
+  color: $grey-d
+  background-color: $white
+  border: 1px solid $brown-l
+  border-radius: 3px
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 8px
+    z-index: 10
+    display: block
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 6px 4px 0 4px
+    border-color: $brown-l transparent transparent transparent
+    transform: translateY(-50%)
+  select
+    min-width: 35px
+    font-size: 1em
+    font-weight: bold
+    text-align: right
+    border: 0
+    background-color: $white
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    &.select--small
+      width: 30px
+
+.rc-slider
+  height: 20px
+  padding: 6px 0 36px
+  .rc-slider-rail,.rc-slider-track,.rc-slider-step
+    height: 8px
+  .rc-slider-rail
+    background-color: $grey-border
+  .rc-slider-track
+    background-color: $grey-m
+  .rc-custom-handle
+    &:nth-child(odd)
+      background: red
+      .rc-handle-value
+        left: auto
+        right: -10px
+        text-align: right
+    .rc-slider-handle
+      margin: 0
+      top: 0
+      height: 20px
+      width: 20px
+      transform: translateX(-50%)
+      border-color: $grey-m
+    .rc-handle-value
+      position: absolute
+      bottom: 0
+      left: -10px
+      text-align: left
+      line-height: 16px
+
+@include breakpoint(xs)
+  .field-group
+    &.field-group--half
+      input, .input
+        width: calc(100% + 11px)
+        margin: 0 0 20px -11px
+        border-right: 1px solid $grey-border
+      + .field-group--half
+        input, .input
+          margin: 0 -11px 20px 0
+          border-left: 1px solid $grey-border
+    &:last-child
+      textarea,.select-wrapper, .textarea
+        margin: 0 -11px
+    input, textarea, .select-wrapper, .input, .textarea
+      width: calc(100% + 20px)
+      margin: 0 -11px 20px
+      border-radius: 0
+      border-color: $grey-border
+      border-right: none
+      border-left: none
+      text-align: left
+      select
+        font-weight: normal

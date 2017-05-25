@@ -1,0 +1,113 @@
+*
+  outline: none
+  box-sizing: border-box
+
+body, button, input, textarea
+  font-family: 'Open Sans', sans-serif
+  font-size: 1em
+  line-height: 21px
+
+body
+  background-color: $paper
+  color: $grey-d
+  &[class*="modal--open"], .modal--opened
+    overflow: hidden
+  .wrapper
+    position: relative
+    max-width: none
+    overflow: hidden
+    &.loading
+      overflow: hidden
+      .container
+        &:before
+          content: ''
+          background: rgba($white,0.4)
+          width: 100%
+          height: calc(100vh - 50px)
+          position: fixed
+          top: 50px
+          left: 75px
+          z-index: 998
+          @include breakpoint(xs)
+            height: calc(100vh - 100px)
+            left: 0px
+        &:after
+          content: ''
+          width: 60px
+          height: 60px
+          position: fixed
+          left: 50%
+          top: 50%
+          z-index: 999
+          transform: translate(-50%,-50%)
+          background-color: $main
+          // background-image: url('../../assets/img/altadis-connect-logo-white.svg')
+          background-size: 30px 30px
+          background-position: center
+          background-repeat: no-repeat
+          border-radius: 50%
+
+    &.sidemenu--closed
+      .container, header, .tabbar, .buy, .page-cart .cart-buttons, .calltoorder
+        left: 0
+        transition: left 0.5s ease
+    &.sidemenu--opened
+      width: 100vw
+      .container, header, .tabbar, .buy, .page-cart .cart-buttons, .calltoorder
+        left: 220px
+        transition: left 0.5s ease
+    .sidemenu
+      position: fixed
+      top: 0
+      bottom: 0
+      min-height: 100vh
+      width: 220px
+      z-index: 0
+      padding: 10px 20px
+      font-size: 1.414em
+      font-weight: bold
+      background-color: $grey-m
+      .sidemenu-link
+        display: block
+        background: none
+        padding: 0 0 20px 0
+        color: $white
+
+
+  .container
+    margin: 0 auto
+    min-height: 100vh
+    min-width: 100vw
+    position: relative
+    display: block
+    width: 100%
+    background: $paper
+    z-index: 1
+    overflow: hidden
+
+  a
+    text-decoration: none
+    color: $grey-d
+    cursor: pointer
+
+  button
+    cursor: pointer
+.no-padding
+  padding: 0
+.no-padding-right
+  padding-right: 0
+.no-padding-left
+  padding-left: 0
+
+.hidden
+  display: none!important
+.hidden-xs
+  @include breakpoint(xs)
+    display: none!important
+.hidden-sm
+  @include breakpoint(md-max)
+    display: none!important
+
+.hidden-sm-md-lg
+  @include breakpoint(sm)
+    display: none!important

@@ -1,0 +1,52 @@
+header
+  height: $header-height
+  width: 100%
+  padding: 10px 20px
+  position: fixed
+  top: 0
+  z-index: 995
+  background-color: $main
+  color: $white
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  h1, .icon
+    font-size: 20px
+    display: inline-block
+    vertical-align: middle
+    background: none
+    border: none
+    color: $white
+  h1
+    margin: 0 15px 0 0
+    order: 0
+  .icon
+    order: 1
+  @include breakpoint(xs)
+    justify-content: space-between
+    h1
+      margin: 0 15px 0 0
+      order: 1
+    .icon-menu
+      order: 0
+    .icon-user
+      order: 2
+
+.modal--account
+  &.modal.modal--headered
+    padding: 0
+    background-color: $paper
+  .list
+    .list-header,.list-cell
+      display: block
+    .list-header
+      padding: 4px 10px
+      background-color: $cream
+      color: $grey-m
+    .list-cell
+      padding: 10px
+      background-color: $paper
+    .list-button
+      margin: 10px
+      width: calc(100% - 20px)
